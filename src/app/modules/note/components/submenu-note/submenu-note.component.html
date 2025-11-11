@@ -1,0 +1,21 @@
+
+<p class="text-3xl text-500 font-bold text-center">{{ title | titlecase }}</p>
+
+<p-toolbar styleClass="mb-4">
+  <ng-template pTemplate="left">
+    <div class="flex my-2 gap-3" >
+      @if( title === 'actives' ) {
+        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-raised" [routerLink]="['/notes/add']"></button>
+      }
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="right" >
+    <p-dropdown
+      [options]="categories"
+      placeholder="Filter by category"
+      [showClear]="true"
+      (onChange)="filterByCategory($event)"
+    ></p-dropdown>
+  </ng-template>
+</p-toolbar>

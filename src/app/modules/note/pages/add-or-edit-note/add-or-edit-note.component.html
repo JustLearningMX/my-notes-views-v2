@@ -1,0 +1,72 @@
+<form [formGroup]="noteForm" class="p-4">
+
+  <h1 class="mt-2">{{ noteId ? "Update Note" : "Add New Note" }}</h1>
+  <p-divider></p-divider>
+
+  <div class="grid">
+
+    <!-- Title -->
+    <div class="field col-12 flex flex-column gap-2">
+      <label for="title">Title</label>
+      <input
+        pInputText
+        id="title"
+        placeholder="Title"
+        formControlName="title"
+      />
+      @if (inputValid('title')) {<small class="text-red-700 font-bold"
+      >Title is required</small
+      >}
+    </div>
+
+    <!-- description -->
+    <div class="field col-12 flex flex-column gap-2">
+      <label for="description">Description</label>
+      <input
+        pInputText
+        id="description"
+        placeholder="Add a description"
+        formControlName="description"
+      />
+    </div>
+
+    <!-- add categories -->
+    <div class="field col-12 flex flex-column gap-2">
+      <label>Categories</label>
+      <div class="mb-1 categories-container flex justify-content-start gap-1">
+        @for(category of categories(); track $index) {
+          <div class="flex align-items-center justify-content-center p-0 m-0">
+            <p-button
+              [label]="category.name | titlecase"
+              badgeClass="p-badge-danger"
+              [rounded]="true"
+              [text]="true"
+              badge="x"
+              (onClick)="removeCategory(category)"
+            >
+            </p-button>
+          </div>
+        }
+      </div>
+
+      <div class="col-12 md:col-6">
+        <p-inputGroup>
+          <button type="button" pButton label="Add" (click)="addCategory()" ></button>
+          <input #category type="text" pInputText placeholder="Category" />
+        </p-inputGroup>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-4">
+    <button
+      pButton
+      pRipple
+      class="bg-primary-700 w-full md:w-4 lg:w-3"
+      [label]="noteId ? 'Save Changes' : 'Add Note'"
+      (click)="save()"
+    ></button>
+  </div>
+
+</form>

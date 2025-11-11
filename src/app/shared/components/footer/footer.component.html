@@ -1,0 +1,24 @@
+<p-toolbar [style]="{ 'display': 'flex', 'justify-content': 'center', 'line-height': '35px', 'padding': '1.5rem 0'}">
+    <div class="row">
+      <div class="col-md-12">
+        <p>{{ this.name }}</p>
+        <div class="flex justify-content-center gap-4 mt-2">
+          <a href="{{ this.github }}" target="_blank" class="btn btn-primary">
+            <span class="pi pi-github" style="font-size: 1.5rem"></span>
+          </a>
+          <a href="{{ this.linkedin }}" target="_blank" class="btn btn-primary">
+            <span class="pi pi-linkedin" style="font-size: 1.5rem"></span>
+          </a>
+          <a href="{{ this.twitter }}" target="_blank" class="btn btn-primary">
+            <span class="pi pi-twitter" style="font-size: 1.5rem"></span>
+          </a>
+          <a href="{{ this.portfolio }}" target="_blank" class="btn btn-primary">
+            <span class="pi pi-globe" style="font-size: 1.5rem"></span>
+          </a>
+          <a href="mailto:{{ this.email }}" target="_blank" class="btn btn-primary">
+            <span class="pi pi-envelope" style="font-size: 1.5rem"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+</p-toolbar>

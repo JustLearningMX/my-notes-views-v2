@@ -1,0 +1,13 @@
+<app-submenu-note [title]="title"/>
+@if( noteService.notes().length <= 0 && isLoading ) {
+  <div class="card flex flex-column align-items-center justify-content-center h-25rem">
+    <p-progressSpinner ariaLabel="loading"></p-progressSpinner>
+    <p class="font-medium text-400">Loading data from Heroku... it's free, be patient :) </p>
+  </div>
+} @else if(noteService.notes().length <= 0 && !isLoading) {
+  <div class="col-12 flex justify-content-center align-items-center h-25rem">
+    <p-messages [(value)]="messageNotData" [enableService]="false" [closable]="false"></p-messages>
+  </div>
+} @else {
+  <grid-note />
+}

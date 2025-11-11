@@ -1,0 +1,8 @@
+
+<section class="grid py-5 justify-content-center gap-2 md:gap-3">
+  @for (note of noteService.notes(); track $index) {
+    <div class="col-12 md:col-5 lg:col-3">
+      <note-card [note]="note" />
+    </div>
+  }
+</section>

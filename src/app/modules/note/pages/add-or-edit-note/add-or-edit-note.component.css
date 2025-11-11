@@ -1,0 +1,22 @@
+.category-badge {
+  /*border-radius: var(--border-radius);*/
+  /*padding: 0.25em 0.5rem;*/
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  /*letter-spacing: 0.3px;*/
+}
+
+.status-category {
+  background: #C8E6C9;
+  color: #256029;
+}
+
+.categories-container {
+  height: 60px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  width: 100%;
+  text-align: left;
+}

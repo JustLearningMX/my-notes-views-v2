@@ -1,0 +1,28 @@
+<p-toolbar [style]="{ 'padding': '.8rem'}">
+
+  <ng-template pTemplate="start">
+    @if(authService.isAuth()) {
+      <p-menu #menu [model]="items" [popup]="true" />
+      <p-button severity="success" [rounded]="true" (click)="menu.toggle($event)" icon="pi pi-ellipsis-v"/>
+    }
+  </ng-template>
+
+  <ng-template pTemplate="center">
+    <a class="flex flex-wrap align-items-center gap-3 no-underline lg:text-2xl" [routerLink]="'/'">
+      <img src="assets/images/logo/default-color.png" alt="logo" height="70" >
+      <p class="app_name"> My Notes </p>
+    </a>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    @if(authService.isAuth()) {
+      <p-button
+        icon="pi pi-sign-out"
+        severity="secondary"
+        (click)="authService.logout()"
+        [rounded]="true"
+      ></p-button>
+    }
+  </ng-template>
+
+</p-toolbar>
