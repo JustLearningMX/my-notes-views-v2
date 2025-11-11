@@ -27,15 +27,11 @@ The stack use to develop and deploy this project is:
 
 Clone the repo:
 ```bash
-git clone https://github.com/ensolvers-github-challenges/Chavez-9d162b.git
+git clone https://github.com/JustLearningMX/my-notes-views-v2.git
 ```
 
 ### Pre-requisites 📋
 
-* Go to dir `/frontend`
-  ```bash
-    cd fronted
-    ```
 * Execute
   ```bash
   npm install
@@ -47,11 +43,11 @@ git clone https://github.com/ensolvers-github-challenges/Chavez-9d162b.git
 
 ## Demo 👨‍💻
 
-- **Application Demo** on Heroku: [app-notes](https://app-notes-1092e9a01fe5.herokuapp.com/)
+- **Application Demo** on Github Pages: [app-notes](https://justlearningmx.github.io/my-notes-views-v2/)
 
 ## Backend 🖥️
 
-Heroku: [app-note-api](https://app-notes-api-e8a7fafb7e17.herokuapp.com/swagger-ui/index.html)
+VM in OCI: [app-note-api](https://hiram-oci-mty.duckdns.org/my-notes-api-v2/v1)
 
 ## Author ✒️
 
